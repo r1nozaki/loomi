@@ -1,12 +1,34 @@
-# React + Vite
+# loomi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Опис
 
-Currently, two official plugins are available:
+**loomi** — це додаток для знайомств з унікальним підходом до пошуку нових людей.  
+Мета проєкту — створити просту та інтуїтивну платформу, де студенти університетів можуть знаходити друзів чи потенційних партнерів, обмінюватися повідомленнями та формувати спільноти.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Інсталяція та запуск
 
-## Expanding the ESLint configuration
+git clone <https://github.com/r1nozaki/loomi>
+cd loomi
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Технології
+
+-JavaScript
+-React
+-Java
+-Spring
+-Tailwind CSS
+-PostgreSQL
+
+## Структура репозиторію
+
+[`Documentation`](https://docs.google.com/document/d/13Ws_p25qviVMbPeRwGo52kzgil1xX_mbbaH0YcE56Pg/edit?tab=t.o9zvuqz8frrp)
+/src - код
+
+## Автори
+
+Іван Загоруй - Frontend Developer
+Валентин Новосад - Backend Developer
+Андрій Дроб - UX/UI Designer
+Максим Мальований - Team Lead
