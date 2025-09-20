@@ -27,13 +27,13 @@ const FooterTop = () => {
       <div className='flex items-center justify-between w-full max-w-screen-2xl m-auto border-b-3 border-[#494949] py-15.5'>
         <div className='flex gap-35 text-white'>
           <div>
-            <h3 className='font-bold text-2xl mb-2.5'>Правила та безпека</h3>
+            <h3 className='font-bold text-lg mb-2.5'>Правила та безпека</h3>
             <ul className='flex flex-col items-center'>
               {rulesSafetyLinks.map(({ path, label }) => (
                 <li key={label} className='w-full'>
                   <Link
                     to={path}
-                    className='text-lg transition-colors duration-300 hover:text-[#F73149]'
+                    className='text-base transition-colors duration-300 hover:text-[#F73149]'
                   >
                     {label}
                   </Link>
@@ -42,13 +42,13 @@ const FooterTop = () => {
             </ul>
           </div>
           <div>
-            <h3 className='font-bold text-2xl mb-2.5'>Інформація про проєкт</h3>
+            <h3 className='font-bold text-lg mb-2.5'>Інформація про проєкт</h3>
             <ul className='flex flex-col items-center'>
               {infoAboutProjectLinks.map(({ path, label }) => (
                 <li key={label} className='w-full'>
                   <Link
                     to={path}
-                    className='text-lg transition-colors duration-300 hover:text-[#F73149]'
+                    className='text-base transition-colors duration-300 hover:text-[#F73149]'
                   >
                     {label}
                   </Link>
@@ -57,13 +57,13 @@ const FooterTop = () => {
             </ul>
           </div>
           <div>
-            <h3 className='font-bold text-2xl mb-2.5'>Підтримка</h3>
+            <h3 className='font-bold text-lg mb-2.5'>Підтримка</h3>
             <ul className='flex flex-col items-center'>
               {supportLinks.map(({ path, label }) => (
                 <li key={label} className='w-full'>
                   <Link
                     to={path}
-                    className='text-lg transition-colors duration-300 hover:text-[#F73149]'
+                    className='text-base transition-colors duration-300 hover:text-[#F73149]'
                   >
                     {label}
                   </Link>
@@ -72,7 +72,7 @@ const FooterTop = () => {
             </ul>
           </div>
           <div>
-            <h3 className='font-bold text-2xl mb-2.5'>Соціальні мережі</h3>
+            <h3 className='font-bold text-lg mb-2.5'>Соціальні мережі</h3>
             <Socials />
           </div>
         </div>

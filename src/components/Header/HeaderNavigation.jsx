@@ -13,7 +13,7 @@ const HeaderNavigation = () => {
         <NavLink key={label} to={path}>
           {({ isActive }) => (
             <span
-              className={`text-2xl transition-colors duration-300 rounded-3xl font-bold hover:bg-white hover:text-black p-2 ${
+              className={`text-lg transition-colors duration-300 rounded-3xl font-bold hover:bg-white hover:text-black p-2 ${
                 isActive ? 'rounded-3xl bg-white text-center' : 'text-white'
               }`}
             >

@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <main className='pt-25'>
+      <main className='pt-15 '>
         <HeroSection />
         <Footer />
       </main>
