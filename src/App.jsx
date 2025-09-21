@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
 import ScrollToTop from './components/ScrollToTop';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsConditionsPage from './pages/TermsConditionsPage';
+import Layout from './components/Layout';
 import './App.css';
 
 const App = () => {
@@ -8,9 +12,14 @@ const App = () => {
     <>
       <Router>
         <ScrollToTop />
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/policy' element={<PrivacyPolicyPage />} />
+            <Route path='/terms' element={<TermsConditionsPage />} />
+          </Routes>
+        </Layout>
       </Router>
     </>
   );

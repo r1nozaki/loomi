@@ -26,11 +26,14 @@ const SignUpForm = ({ handleSignUp }) => {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema), mode: 'onBlur' });
 
   const onSubmit = data => {
     console.log(data);
+
+    reset();
   };
 
   const passwordValue = watch('password');
@@ -105,7 +108,7 @@ const SignUpForm = ({ handleSignUp }) => {
             )}
           </div>
           <button
-            type='button'
+            type='submit'
             className='w-full py-4 bg-[#674CFF] rounded-[50px] text-xl text-white text-center transition-colors duration-300 hover:bg-[#5038c6] hover:cursor-pointer'
           >
             Зареєструватись
@@ -118,7 +121,7 @@ const SignUpForm = ({ handleSignUp }) => {
           <hr className='border-t border-[#1D0F0F] flex-grow' />
         </div>
         <button
-          type='submit'
+          type='button'
           className='w-full flex items-center  bg-[#674CFF] hover:bg-[#5038c6] rounded-[50px] text-xl text-white py-4 transition-colors duration-300 relative hover:cursor-pointer'
         >
           <span className='w-13 h-13 rounded-full bg-white flex justify-center items-center py-2 absolute left-1'>
