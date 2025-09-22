@@ -1,6 +1,7 @@
 import WhyUs from '../components/AboutUs/WhyUs';
 import WhoWeAre from '../components/AboutUs/WhoWeAre';
 import Banner from '../components/Banner';
+import Newsletter from '../components/Newsletter/Newsletter';
 const AboutPage = () => {
   return (
     <>
@@ -14,6 +15,9 @@ const AboutPage = () => {
         />
       </div>
       <WhoWeAre />
+      <div className='px-5 bg-[#272727] pt-10'>
+        <Newsletter />
+      </div>
     </>
   );
 };

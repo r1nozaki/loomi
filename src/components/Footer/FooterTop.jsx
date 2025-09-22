@@ -6,7 +6,7 @@ const FooterTop = () => {
     { path: '/policy', label: 'Політика конфіденційності' },
     { path: '/terms', label: 'Умови користування' },
     { path: '/safety', label: 'Поради з безпеки' },
-    { path: '/contact', label: 'Повідомити про проблему' },
+    { path: '/problem', label: 'Повідомити про проблему' },
   ];
 
   const infoAboutProjectLinks = [

@@ -10,13 +10,13 @@ import GoogleIcon from '../../assets/googleIcon.svg';
 const schema = yup.object().shape({
   email: yup
     .string()
-    .required("Електронна адреса обов'язкова")
-    .email('Неправильна електронна адреса'),
+    .required("Поле ' Електронна адреса ' є обов'язковим")
+    .email('Введіть коректну електронну адресу'),
   password: yup
     .string()
-    .required("Пароль обов'язковий")
-    .min(8, 'Мінімальна кількість символів 8')
-    .max(20, 'Максимальна кількість символів 20'),
+    .required("Поле ' Пароль ' є обов'язковим")
+    .min(8, 'Пароль має містити щонайменше 8 символів')
+    .max(20, 'Пароль має бути не довший за 20 символів'),
 });
 
 const SignInForm = ({ handleSignInModal }) => {
@@ -71,7 +71,7 @@ const SignInForm = ({ handleSignInModal }) => {
           <div className='flex flex-col gap-2'>
             <input
               {...register('email')}
-              className='border-1 border-black w-full h-14.5 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:border-2'
+              className='border-1 border-black w-full h-14.5 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:outline-none focus:border-2'
               placeholder='Введіть електрону адресу'
             />
             {errors.email && (
@@ -82,7 +82,7 @@ const SignInForm = ({ handleSignInModal }) => {
             <div className='relative flex items-center'>
               <input
                 {...register('password')}
-                className='border-1 border-black w-full h-14.5 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:border-2'
+                className='border-1 border-black w-full h-14.5 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:outline-none focus:border-2'
                 placeholder='Введіть пароль'
                 type={isShowPassword ? 'text' : 'password'}
               />
