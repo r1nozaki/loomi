@@ -6,7 +6,7 @@ const AboutPage = () => {
   return (
     <>
       <WhyUs />
-      <div className='px-23 bg-[#272727] text-white pt-10'>
+      <div className='px-5 md:px-23 bg-[#272727] text-white pt-10'>
         <Banner
           title={'Твої історії починаються тут'}
           text={

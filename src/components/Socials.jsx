@@ -4,7 +4,6 @@ import {
   FaTelegramPlane,
   FaYoutube,
 } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
 
 const Socials = () => {
   const socialsIcon = [
@@ -24,9 +23,9 @@ const Socials = () => {
       alt: 'Youtube',
     },
     {
-      icon: <FaXTwitter size={20} />,
-      link: 'https://x.com/r1nozaki',
-      alt: 'Twitter',
+      icon: <FaTiktok size={20} />,
+      link: 'https://www.tiktok.com/@bluehgfdw?_t=ZM-8zxuIwv9rFw&_r=1',
+      alt: 'TikTok',
     },
   ];
   return (

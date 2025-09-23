@@ -4,9 +4,11 @@ import useBlockScroll from '../../hooks/useBlockScroll';
 import bgHero from '../../assets/bgHero.svg';
 import Btn from '../UI/Btn';
 import SignUpForm from '../SigningForm/SignUpForm';
+import HeaderSignIn from '../Header/HeaderSignIn';
 
 const HeroSection = () => {
   const [isOpenSignUp, setIsOpenSignUp] = useState(false);
+  const [signInModal, setSignInModal] = useState(false);
 
   useBlockScroll(isOpenSignUp, lenis);
 
@@ -24,17 +26,25 @@ const HeroSection = () => {
       }}
     >
       <div className='w-full min-h-screen bg-black/25 flex flex-col justify-center items-center text-black'>
-        <h1 className='text-white text-[60px] font-bold'>
+        <h1 className='text-white text-2xl lg:text-[60px] font-bold '>
           Нові знайомства — нові емоції
         </h1>
         <div className='w-65 mt-4'>
-          <Btn onClick={handleSignUp}>Створи обліковий запис</Btn>
+          {isOpenSignUp ? null : (
+            <Btn onClick={handleSignUp}>Створи обліковий запис</Btn>
+          )}
           {isOpenSignUp && (
             <SignUpForm
               handleSignUp={handleSignUp}
               isOpenSignUp={isOpenSignUp}
             />
           )}
+          <div className='flex justify-center mt-5 md:hidden'>
+            <HeaderSignIn
+              setSignInModal={setSignInModal}
+              signInModal={signInModal}
+            />
+          </div>
         </div>
       </div>
     </section>

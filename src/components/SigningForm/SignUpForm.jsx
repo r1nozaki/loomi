@@ -57,7 +57,7 @@ const SignUpForm = ({ handleSignUp }) => {
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.3 }}
         onSubmit={handleSubmit(onSubmit)}
-        className=' fixed top-[55%] left-[50%] z-50 -translate-x-[50%] -translate-y-[50%] w-133 h-125 px-20  rounded-[52px] bg-[#D4DBE2] flex flex-col items-center '
+        className='fixed top-[37%] left-[50%] md:top-[55%] z-50 -translate-x-[50%] -translate-y-[50%] md:w-133 md:h-125 md:px-20 w-90 h-110 rounded-[52px] bg-[#D4DBE2] flex flex-col items-center px-10'
       >
         <X
           className='absolute top-5 right-6 hover:cursor-pointer'
@@ -72,7 +72,7 @@ const SignUpForm = ({ handleSignUp }) => {
           <div className='flex flex-col gap-2'>
             <input
               {...register('email')}
-              className='border-1 border-black w-full h-14.5 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:border-2'
+              className='border-1 border-black w-full md:h-14.5 h-10 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:outline-none focus:border-2'
               placeholder='Введіть електрону адресу'
             />
             {errors.email && (
@@ -83,7 +83,7 @@ const SignUpForm = ({ handleSignUp }) => {
             <div className='relative flex items-center'>
               <input
                 {...register('password')}
-                className='border-1 border-black w-full h-14.5 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:border-2'
+                className='border-1 border-black w-full md:h-14.5 h-10 px-3 rounded-2xl bg-white placeholder:text-[#D4DBE2] focus:outline-none focus:border-2'
                 placeholder='Введіть пароль'
                 type={isShowPassword ? 'text' : 'password'}
               />
@@ -109,7 +109,7 @@ const SignUpForm = ({ handleSignUp }) => {
           </div>
           <button
             type='submit'
-            className='w-full py-4 bg-[#674CFF] rounded-[50px] text-xl text-white text-center transition-colors duration-300 hover:bg-[#5038c6] hover:cursor-pointer'
+            className='w-full py-2 md:py-4 bg-[#674CFF] rounded-[50px] text-lg md:text-xl text-white text-center transition-colors duration-300 hover:bg-[#5038c6] hover:cursor-pointer'
           >
             Зареєструватись
           </button>
@@ -122,9 +122,9 @@ const SignUpForm = ({ handleSignUp }) => {
         </div>
         <button
           type='button'
-          className='w-full flex items-center  bg-[#674CFF] hover:bg-[#5038c6] rounded-[50px] text-xl text-white py-4 transition-colors duration-300 relative hover:cursor-pointer'
+          className='w-full flex items-center  bg-[#674CFF] hover:bg-[#5038c6] rounded-[50px] text-xl text-white py-2 md:py-4 transition-colors duration-300 relative hover:cursor-pointer'
         >
-          <span className='w-13 h-13 rounded-full bg-white flex justify-center items-center py-2 absolute left-1'>
+          <span className='w-10 h-10 md:w-13 md:h-13 rounded-full bg-white flex justify-center items-center py-2 absolute left-1'>
             <img src={GoogleIcon} alt='Google icon' />
           </span>
           <span className='mx-auto'>Продовжити з Google</span>

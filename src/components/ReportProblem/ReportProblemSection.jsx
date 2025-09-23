@@ -2,7 +2,7 @@ import ReportProblemForm from './ReportProblemForm';
 
 const ReportProblemSection = () => {
   return (
-    <section className='w-full min-h-screen flex flex-col items-center justify-center bg-[#272727] text-center pt-16'>
+    <section className='w-full px-3 md:px-0 min-h-screen flex flex-col items-center justify-center bg-[#272727] text-center pt-16'>
       <h1 className='w-full text-4xl font-extrabold text-[#F73149] mb-8'>
         Повідомити про проблему
       </h1>

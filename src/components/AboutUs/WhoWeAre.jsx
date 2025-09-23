@@ -5,7 +5,7 @@ import StudentTeam from '../../assets/studentTeam.png';
 
 const WhoWeAre = () => {
   return (
-    <section className='w-full px-23 min-h-screen bg-[#272727] relative  grid grid-cols-1 md:grid-cols-2 items-center gap-5 '>
+    <section className='w-full px-5 md:px-23 min-h-screen bg-[#272727] relative  grid grid-cols-1 md:grid-cols-2 items-center gap-5 '>
       <div className='w-full '>
         <h2 className='w-full font-semibold text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3 lg:mb-4 text-white'>
           Хто ми?

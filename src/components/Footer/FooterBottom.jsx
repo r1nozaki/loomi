@@ -1,7 +1,7 @@
 const FooterBottom = () => {
   return (
     <div className='w-full py-7 px-15'>
-      <div className=' flex justify-between items-center max-w-screen-2xl m-auto'>
+      <div className=' flex flex-col md:flex-row gap-2 md:gap-0 justify-between items-center max-w-screen-2xl m-auto'>
         <p className='text-white text-sm'>
           <span className=''>Design by loomi.</span>
           <span>

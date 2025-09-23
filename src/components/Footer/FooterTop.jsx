@@ -23,9 +23,9 @@ const FooterTop = () => {
     { path: '/instruction', label: 'Інструкція для новачків' },
   ];
   return (
-    <div className='w-full px-15  '>
-      <div className='flex items-center justify-between w-full max-w-screen-2xl m-auto border-b-3 border-[#494949] py-15.5'>
-        <div className='flex gap-35 text-white'>
+    <div className='w-full px-15'>
+      <div className='flex flex-col md:flex-row items-center justify-between w-full max-w-screen-2xl m-auto border-b-3 border-[#494949] py-15.5'>
+        <div className='flex flex-col md:flex-row gap-5 md:gap-35 text-white text-center md:text-left'>
           <div>
             <h3 className='font-bold text-lg mb-2.5'>Правила та безпека</h3>
             <ul className='flex flex-col items-center'>
