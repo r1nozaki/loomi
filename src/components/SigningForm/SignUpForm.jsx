@@ -57,7 +57,7 @@ const SignUpForm = ({ handleSignUp }) => {
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.3 }}
         onSubmit={handleSubmit(onSubmit)}
-        className='fixed top-[37%] left-[50%] md:top-[55%] z-50 -translate-x-[50%] -translate-y-[50%] md:w-133 md:h-125 md:px-20 w-90 h-110 rounded-[52px] bg-[#D4DBE2] flex flex-col items-center px-10'
+        className='fixed top-[45%] left-[50%] md:top-[55%] z-50 -translate-x-[50%] -translate-y-[50%] md:w-133 md:h-125 md:px-20 w-90 h-110 rounded-[52px] bg-[#D4DBE2] flex flex-col items-center px-10'
       >
         <X
           className='absolute top-5 right-6 hover:cursor-pointer'
@@ -127,7 +127,9 @@ const SignUpForm = ({ handleSignUp }) => {
           <span className='w-10 h-10 md:w-13 md:h-13 rounded-full bg-white flex justify-center items-center py-2 absolute left-1'>
             <img src={GoogleIcon} alt='Google icon' />
           </span>
-          <span className='mx-auto'>Продовжити з Google</span>
+          <span className='mx-auto text-lg md:text-xl'>
+            Продовжити з Google
+          </span>
         </button>
       </motion.form>
     </AnimatePresence>
