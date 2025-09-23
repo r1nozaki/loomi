@@ -57,7 +57,7 @@ const SignUpForm = ({ handleSignUp }) => {
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.3 }}
         onSubmit={handleSubmit(onSubmit)}
-        className='fixed top-[45%] left-[50%] md:top-[55%] z-50 -translate-x-[50%] -translate-y-[50%] md:w-133 md:h-125 md:px-20 w-90 h-110 rounded-[52px] bg-[#D4DBE2] flex flex-col items-center px-10'
+        className='fixed top-[55%] left-[50%]  z-50 -translate-x-[50%] -translate-y-[50%] md:w-133 md:h-125 md:px-20 w-90 h-110 rounded-[52px] bg-[#D4DBE2] flex flex-col items-center px-10'
       >
         <X
           className='absolute top-5 right-6 hover:cursor-pointer'
