@@ -5,8 +5,8 @@ import StudentTeam from '../../assets/studentTeam.png';
 
 const WhoWeAre = () => {
   return (
-    <section className='w-full px-5 md:px-23 min-h-screen bg-[#272727] relative  grid grid-cols-1 md:grid-cols-2 items-center gap-5 '>
-      <div className='w-full '>
+    <section className='w-full px-5 md:px-23 min-h-screen bg-[#272727] relative  grid grid-cols-1 md:grid-cols-2 items-center md:gap-5 '>
+      <div className='w-full row-start-2 md:row-start-1'>
         <h2 className='w-full font-semibold text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3 lg:mb-4 text-white'>
           Хто ми?
         </h2>
@@ -43,14 +43,15 @@ const WhoWeAre = () => {
           <li>Простота, легкість і без зайвих ускладнень.</li>
         </ul>
       </div>
-      <div className='relative w-full h-0 pt-[85%] rounded-lg overflow-hidden'>
+      <div className='relative w-full h-0 pb-[85%] rounded-lg overflow-hidden mb-5 mt-10 md:mt-0 md:mb-0'>
         <img
           src={StudentTeam}
+          loading='lazy'
           alt='Student team'
           className='absolute top-0 right-0 w-full h-full object-cover object-center'
         />
       </div>
-      <Link to='/' className='w-36 mx-auto col-span-2'>
+      <Link to='/' className='w-36 mx-auto col-span-2 mt-10 md:mt-0'>
         <Btn>Почати</Btn>
       </Link>
     </section>

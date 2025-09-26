@@ -13,7 +13,7 @@ const FooterBottom = () => {
               target='_blank'
               className='underline'
             >
-              Drob Andriy
+              Andrii Drob
             </a>
           </span>
         </p>

@@ -14,7 +14,7 @@ const Socials = () => {
     },
     {
       icon: <FaTelegramPlane size={20} />,
-      link: 'https://web.telegram.org/k/#r1nozaki',
+      link: 'https://t.me/r1nozaki',
       alt: 'Telegram',
     },
     {

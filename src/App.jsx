@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsConditionsPage from './pages/TermsConditionsPage';
 import ReportProblemSection from './components/ReportProblem/ReportProblemSection';
+import TipsSafetyPage from './pages/TipsSafetyPage';
 import Layout from './components/Layout';
 import './App.css';
 
@@ -20,6 +21,7 @@ const App = () => {
             <Route path='/policy' element={<PrivacyPolicyPage />} />
             <Route path='/terms' element={<TermsConditionsPage />} />
             <Route path='/problem' element={<ReportProblemSection />} />
+            <Route path='/safety' element={<TipsSafetyPage />} />
           </Routes>
         </Layout>
       </Router>
