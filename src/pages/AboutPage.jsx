@@ -1,6 +1,6 @@
 import WhyUs from '../components/AboutUs/WhyUs';
 import WhoWeAre from '../components/AboutUs/WhoWeAre';
-import Banner from '../components/Banner';
+import Banner from '../components/UI/Banner';
 import Newsletter from '../components/Newsletter/Newsletter';
 const AboutPage = () => {
   return (

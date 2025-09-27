@@ -5,17 +5,17 @@ import tipsContent from '../../data/TipsContent';
 
 const TipsSafetyContent = () => {
   return (
-    <div className='mb-10 max-w-6xl'>
-      <div className='flex items-center'>
+    <div className='mb-10 w-full md:max-w-6xl'>
+      <div className='flex flex-col md:flex-row items-center'>
         <div className='w-full'>
-          <h2 className='text-white text-5xl font-bold  mb-5'>
+          <h2 className='text-white text-2xl md:text-5xl text-center md:text-left font-bold mb-5'>
             Твоя безпека — наш пріоритет
           </h2>
-          <p className='text-white/80 text-lg'>
+          <p className='text-white/80 text-base text-center md:text-left md:text-lg'>
             Знайомства — це круто. Але завжди варто пам'ятати про свою безпеку.
           </p>
         </div>
-        <div className='w-100 h-100 '>
+        <div className='w-70 h-70 md:w-100 md:h-100'>
           <img
             src={SafetyPeople}
             alt='safetyIcon'
@@ -23,12 +23,12 @@ const TipsSafetyContent = () => {
           />
         </div>
       </div>
-      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center gap-3 md:gap-10 mb-10'>
         {tipsContent.map(({ icon, tip }) => (
           <TipsCard key={tip} icon={icon} tip={tip} />
         ))}
       </div>
-      <div className='w-full bg-[#F73149] rounded-lg p-5 text-center'>
+      <div className='w-full bg-[#F73149] rounded-lg p-5 text-center h-58'>
         <h3 className='text-white text-xl font-bold mb-3'>
           Що робити у випадку проблеми
         </h3>

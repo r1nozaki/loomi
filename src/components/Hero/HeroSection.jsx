@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { lenis } from '../../lenisInstance';
 import useBlockScroll from '../../hooks/useBlockScroll';
-import bgHero from '../../assets/bgHero.svg';
+import bgHero from '../../assets/bgHero.jpg';
 import Btn from '../UI/Btn';
 import SignUpForm from '../SigningForm/SignUpForm';
 import HeaderSignIn from '../Header/HeaderSignIn';
@@ -11,6 +11,7 @@ const HeroSection = () => {
   const [signInModal, setSignInModal] = useState(false);
 
   useBlockScroll(isOpenSignUp, lenis);
+  useBlockScroll(signInModal, lenis);
 
   const handleSignUp = () => {
     setIsOpenSignUp(!isOpenSignUp);
@@ -30,9 +31,13 @@ const HeroSection = () => {
           Нові знайомства — нові емоції
         </h1>
         <div className='w-65 mt-4'>
-          {isOpenSignUp ? null : (
-            <Btn onClick={handleSignUp}>Створи обліковий запис</Btn>
-          )}
+          <Btn
+            onClick={handleSignUp}
+            className={`${isOpenSignUp ? 'opacity-0' : 'opacity-100'}`}
+          >
+            Створи обліковий запис
+          </Btn>
+
           {isOpenSignUp && (
             <SignUpForm
               handleSignUp={handleSignUp}
