@@ -25,7 +25,7 @@ const SafetyPage = lazy(() => import('./pages/TipsSafetyPage'));
 const PolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./pages/TermsConditionsPage'));
 const ReportProblemPage = lazy(() => import('./pages/ReportProblemPage'));
-
+const SupportPage = lazy(() => import('./pages/SupportPage'));
 export const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -36,6 +36,7 @@ export const router = createBrowserRouter([
       { path: ROUTER_PATHS.PROBLEM, element: <ReportProblemPage /> },
       { path: ROUTER_PATHS.POLICY, element: <PolicyPage /> },
       { path: ROUTER_PATHS.TERMS, element: <TermsPage /> },
+      { path: ROUTER_PATHS.SUPPORT, element: <SupportPage /> },
       { path: '*', element: '' },
     ],
   },

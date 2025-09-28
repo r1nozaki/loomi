@@ -28,7 +28,7 @@ const TipsSafetyContent = () => {
           <TipsCard key={tip} icon={icon} tip={tip} />
         ))}
       </div>
-      <div className='w-full bg-[#F73149] rounded-lg p-5 text-center h-58'>
+      <div className='w-full bg-[#F73149] rounded-lg p-5 text-center h-62 md:h-58'>
         <h3 className='text-white text-xl font-bold mb-3'>
           Що робити у випадку проблеми
         </h3>

@@ -27,7 +27,7 @@ const HeroSection = () => {
       }}
     >
       <div className='w-full min-h-screen bg-black/25 flex flex-col justify-center items-center text-black'>
-        <h1 className='text-white text-2xl lg:text-[60px] font-bold '>
+        <h1 className='text-white text-2xl lg:text-6xl font-bold '>
           Нові знайомства — нові емоції
         </h1>
         <div className='w-65 mt-4'>
