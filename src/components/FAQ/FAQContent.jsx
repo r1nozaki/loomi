@@ -24,7 +24,7 @@ const FAQContent = () => {
       </div>
       <Link
         to='/support'
-        className='w-full max-w-3xl h-12 rounded-xl mx-auto block bg-[#F73149] text-center py-2.5 text-white mt-5 transition-colors duration-300 hover:bg-[#D62B40] '
+        className='w-full max-w-3xl h-16 md:h-12 rounded-xl mx-auto block bg-[#F73149] text-center py-2.5 text-white mt-5 transition-colors duration-300 hover:bg-[#D62B40] '
       >
         Не знайшлось найти відповідь? Напиши нам 📩
       </Link>
