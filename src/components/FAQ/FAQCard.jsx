@@ -41,7 +41,9 @@ const FAQCard = ({ question, answer }) => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className='overflow-hidden'
           >
-            <div className='px-4 pb-4 text-white/80'>{answer}</div>
+            <div className='px-4 pb-4 text-white/80 text-sm md:text-base'>
+              {answer}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
