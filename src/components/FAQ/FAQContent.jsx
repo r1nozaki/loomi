@@ -13,7 +13,7 @@ const FAQContent = () => {
           наш застосунок
         </p>
       </div>
-      <div className='w-full max-w-5xl mx-auto flex flex-col gap-3 mt-0 md:mt-10 lg:mt-20'>
+      <div className='w-full md:max-w-5xl mx-auto flex flex-col gap-3 mt-0 md:mt-10 lg:mt-20'>
         {faqContent.map(faq => (
           <FAQCard
             key={faq.question}
@@ -24,7 +24,7 @@ const FAQContent = () => {
       </div>
       <Link
         to='/support'
-        className='w-full max-w-3xl h-16 md:h-12 rounded-xl mx-auto block bg-[#F73149] text-center py-2.5 text-white mt-5 transition-colors duration-300 hover:bg-[#D62B40] '
+        className='w-full max-w-3xl h-16 md:h-12 rounded-xl mx-auto block bg-[#F73149] text-center py-2.5 px-2 text-white mt-5 transition-colors duration-300 hover:bg-[#D62B40] '
       >
         Не знайшлось найти відповідь? Напиши нам 📩
       </Link>
