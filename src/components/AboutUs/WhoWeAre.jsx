@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import Btn from '../UI/Btn';
 
-import StudentTeam from '../../assets/studentTeam.png';
+import StudentTeam from '../../assets/images/studentTeam.png';
 
 const WhoWeAre = () => {
   return (

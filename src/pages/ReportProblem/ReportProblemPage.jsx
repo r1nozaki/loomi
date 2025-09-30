@@ -1,4 +1,4 @@
-import ReportProblemSection from '../components/ReportProblem/ReportProblemSection';
+import ReportProblemSection from '../../components/ReportProblem/ReportProblemSection';
 
 const ReportProblemPage = () => {
   return <ReportProblemSection />;

@@ -1,4 +1,4 @@
-import SupportSection from '../components/Support/SupportSection';
+import SupportSection from '../../components/Support/SupportSection';
 
 const SupportPage = () => {
   return <SupportSection />;

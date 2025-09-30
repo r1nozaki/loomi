@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import SafetyPeople from '../../assets/safetyPeople.png';
+import SafetyPeople from '../../assets/images/safetyPeople.png';
 import TipsCard from './TipsCard';
-import tipsContent from '../../data/TipsContent';
+import tipsContent from '../../data/TipsCardContent';
 
 const TipsSafetyContent = () => {
   return (

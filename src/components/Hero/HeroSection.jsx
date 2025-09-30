@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { lenis } from '../../lenisInstance';
 import useBlockScroll from '../../hooks/useBlockScroll';
-import bgHero from '../../assets/bgHero.jpg';
+import bgHero from '../../assets/backrounds/bgHero.jpg';
 import Btn from '../UI/Btn';
 import SignUpForm from '../SigningForm/SignUpForm';
-import HeaderSignIn from '../Header/HeaderSignIn';
+import HeaderSignIn from '../layout/Header/HeaderSignIn';
 
 const HeroSection = () => {
   const [isOpenSignUp, setIsOpenSignUp] = useState(false);

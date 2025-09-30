@@ -1,6 +1,5 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router';
-import AboutPage from './pages/AboutPage';
 
 export const ROUTER_PATHS = {
   HOME: '/',
@@ -19,13 +18,22 @@ export const ROUTER_PATHS = {
 };
 
 const AppLayout = lazy(() => import('./App'));
-const HomePage = lazy(() => import('./pages/HomePage'));
-const AboutUsPage = lazy(() => import('./pages/AboutPage'));
-const SafetyPage = lazy(() => import('./pages/TipsSafetyPage'));
-const PolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
-const TermsPage = lazy(() => import('./pages/TermsConditionsPage'));
-const ReportProblemPage = lazy(() => import('./pages/ReportProblemPage'));
-const SupportPage = lazy(() => import('./pages/SupportPage'));
+const HomePage = lazy(() => import('./pages/Home/HomePage'));
+const AboutUsPage = lazy(() => import('./pages/AboutUs/AboutPage'));
+const SafetyPage = lazy(() => import('./pages/TipsSafety/TipsSafetyPage'));
+const PolicyPage = lazy(() =>
+  import('./pages/PrivacyPolicy/PrivacyPolicyPage')
+);
+const TermsPage = lazy(() =>
+  import('./pages/TermsConditions/TermsConditionsPage')
+);
+const ReportProblemPage = lazy(() =>
+  import('./pages/ReportProblem/ReportProblemPage')
+);
+const SupportPage = lazy(() => import('./pages/Support/SupportPage'));
+const FAQPage = lazy(() => import('./pages/FAQ/FAQPage'));
+const NotFoundPage = lazy(() => import('./pages/404/Page404'));
+
 export const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -37,7 +45,8 @@ export const router = createBrowserRouter([
       { path: ROUTER_PATHS.POLICY, element: <PolicyPage /> },
       { path: ROUTER_PATHS.TERMS, element: <TermsPage /> },
       { path: ROUTER_PATHS.SUPPORT, element: <SupportPage /> },
-      { path: '*', element: '' },
+      { path: ROUTER_PATHS.FAQ, element: <FAQPage /> },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
 ]);

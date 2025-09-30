@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import supportContent from '../../data/SupportCardContent';
-import supportPeople from '../../assets/supportPeople.png';
+import supportPeople from '../../assets/images/supportPeople.png';
 import SupportCard from './SupportCard';
 import SupportForm from './SupportForm';
 
@@ -18,7 +18,7 @@ const SupportContent = () => {
           <Link
             to='https://t.me/r1nozaki'
             target='_blank'
-            className='text-white bg-[#F73149] py-3 px-5 rounded-md hover:bg-[#D62B40] text-center block  md:inline'
+            className='text-white bg-[#F73149] py-3 px-5 rounded-md transition-colors duration-300  hover:bg-[#D62B40] text-center block  md:inline'
           >
             Написати в підтримку
           </Link>

@@ -1,4 +1,4 @@
-import SignInForm from '../SigningForm/SignInForm';
+import SignInForm from '../../SigningForm/SignInForm';
 
 const HeaderSignIn = ({ setSignInModal, signInModal }) => {
   const handleSignInModal = () => {

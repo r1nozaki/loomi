@@ -1,4 +1,4 @@
-import TermsSection from '../components/TermsConditions/TermsSection';
+import TermsSection from '../../components/TermsConditions/TermsSection';
 
 const TermsConditionsPage = () => {
   return <TermsSection />;

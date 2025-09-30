@@ -2,7 +2,7 @@ import { StrictMode, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router';
 import { router } from './router.jsx';
-import Loader from './components/Loader.jsx';
+import Loader from './components/UI/Loader.jsx';
 import './App.css';
 
 createRoot(document.getElementById('root')).render(

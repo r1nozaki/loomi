@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import Socials from '../Socials';
+import Socials from '../../common/Socials';
 
 const FooterTop = () => {
   const rulesSafetyLinks = [

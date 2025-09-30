@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
-import LogoIcon from '../assets/Logo.svg';
-import LogoPhone from '../assets/LogoPhone.svg';
+import LogoIcon from '../../assets/icons/Logo.svg';
+import LogoPhone from '../../assets/icons/LogoPhone.svg';
 
 const Logo = () => {
   return (

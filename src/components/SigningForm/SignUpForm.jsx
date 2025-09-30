@@ -3,9 +3,9 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AnimatePresence, motion } from 'motion/react';
 import * as yup from 'yup';
-import Logo from '../Logo';
+import Logo from '../common/Logo';
 import { X, Eye, EyeOff } from 'lucide-react';
-import GoogleIcon from '../../assets/googleIcon.svg';
+import GoogleIcon from '../../assets/icons/googleIcon.svg';
 
 const schema = yup.object().shape({
   email: yup

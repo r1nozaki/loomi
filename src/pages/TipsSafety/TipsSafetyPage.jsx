@@ -1,4 +1,4 @@
-import TipsSafetySection from '../components/TipsSafety/TipsSafetySection';
+import TipsSafetySection from '../../components/TipsSafety/TipsSafetySection';
 
 const TipsSafetyPage = () => {
   return <TipsSafetySection />;

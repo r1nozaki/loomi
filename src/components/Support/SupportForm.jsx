@@ -99,7 +99,7 @@ const SupportForm = () => {
         <button
           type='sumbit'
           disabled={isSending}
-          className='py-3 px-5 text-white bg-[#F73149] rounded-md hover:bg-[#D62B40] hover:cursor-pointer'
+          className='py-3 px-5 text-white bg-[#F73149] rounded-md transition-colors duration-300 hover:bg-[#D62B40] hover:cursor-pointer'
         >
           {isSending ? <ClipLoader size={30} color='#ffffff' /> : 'Надіслати'}
         </button>

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { Menu, X } from 'lucide-react';
-import { lenis } from '../../lenisInstance';
-import useBlockScroll from '../../hooks/useBlockScroll';
-import Logo from '../Logo';
+import { lenis } from '../../../lenisInstance';
+import useBlockScroll from '../../../hooks/useBlockScroll';
+import Logo from '../../common/Logo';
 import HeaderNavigation from './HeaderNavigation';
 import HeaderSignIn from './HeaderSignIn';
 import { AnimatePresence, motion } from 'motion/react';
