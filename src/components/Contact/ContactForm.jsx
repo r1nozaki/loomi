@@ -14,14 +14,14 @@ const schema = yup.object().shape({
     .string()
     .required("Поле ' Електронна адреса ' є обов'язковим")
     .email('Введіть коректну електронну адресу'),
-  topic: yup
+  message: yup
     .string()
     .required("Поле ' Тема звернення '  є обов'язковим")
     .min(10, 'Опишіть проблему детальніше (мінімум 10 символів)')
     .max(1500, 'Скоротіть опис — дозволено до 1500 символів'),
 });
 
-const SupportForm = () => {
+const ContactForm = () => {
   const [isSending, setIsSending] = useState(false);
 
   const {
@@ -37,79 +37,64 @@ const SupportForm = () => {
     emailjs
       .send(
         'service_i5joimm',
-        'template_hyy7fbc',
+        'template_n50ityn',
         {
           name: data.name,
           email: data.email,
-          topic: data.topic,
+          message: data.message,
         },
         'PskL4GEQ6kMNnIPsp'
       )
-      .then(() => {
-        reset();
-      })
+      .then(reset())
       .catch(err => {
         console.error('Помилка при відправці:', err);
       })
       .finally(() => setIsSending(false));
   };
-
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className='w-full bg-black/20 p-10 text-white'
+      className='w-full flex flex-col gap-4 bg-black/20 px-5 py-10 rounded-lg'
     >
-      <div className='flex flex-col mb-5'>
-        <label htmlFor='name' className='text-white mb-2'>
-          Ім'я
-        </label>
+      <div className='flex flex-col'>
         <input
           {...register('name')}
-          className='w-full h-10 border border-gray-200/20 pl-2 bg-[#272727]  rounded focus:outline-none focus:border-2'
+          className='w-full border border-gray-200/20 p-3 rounded-xl text-white placeholder:text-white/70 focus:outline-none focus:border-white'
+          placeholder="Ім'я"
         />
         {errors.name && (
-          <p className='text-red-500 text-sm'>{errors.name.message}</p>
+          <p className='text-sm text-red-500'>{errors.name.message}</p>
         )}
       </div>
-      <div className='flex flex-col mb-5'>
-        <label htmlFor='email' className='text-white mb-2'>
-          Електронна адреса
-        </label>
+      <div className='flex flex-col'>
         <input
           {...register('email')}
-          className='w-full h-10 border border-gray-200/20 pl-2 bg-[#272727]  rounded focus:outline-none focus:border-2'
+          className='w-full border border-gray-200/20 p-3 rounded-xl text-white placeholder:text-white/70 focus:outline-none focus:border-white'
+          placeholder='Електронна адреса'
         />
         {errors.email && (
-          <p className='text-red-500 text-sm'>{errors.email.message}</p>
+          <p className='text-sm text-red-500'>{errors.email.message}</p>
         )}
       </div>
-      <div className='flex flex-col mb-5'>
-        <label htmlFor='topic' className='text-white mb-2'>
-          Тема звернення
-        </label>
+      <div className='flex flex-col'>
         <textarea
-          rows={4}
-          {...register('topic')}
-          className='w-full  border border-gray-200/20 pl-2 bg-[#272727]  rounded focus:outline-none focus:border-2 resize-none'
+          rows={5}
+          {...register('message')}
+          className='w-full border border-gray-200/20 p-3 rounded-xl resize-none text-white placeholder:text-white/70 focus:outline-none focus:border-white'
+          placeholder='Повідомлення'
         />
-        {errors.topic && (
-          <p className='text-red-500 text-sm'>{errors.topic.message}</p>
+        {errors.message && (
+          <p className='text-sm text-red-500'>{errors.message.message}</p>
         )}
       </div>
-      <div className='flex items-center gap-3 mt-6'>
-        <button
-          type='sumbit'
-          disabled={isSending}
-          className='py-3 px-5 text-white bg-[#F73149] rounded-md transition-colors duration-300 hover:bg-[#D62B40] hover:cursor-pointer'
-        >
-          {isSending ? <ClipLoader size={30} color='#ffffff' /> : 'Надіслати'}
-        </button>
-        <span className='text-white/80 text-sm'>
-          Ми відповімо протягом 24 годин.
-        </span>
-      </div>
+      <button
+        type='submit'
+        className='w-full bg-[#F73149] text-white p-2 rounded-lg transition-colors duration-300 hover:bg-[#D62B40] hover:cursor-pointer'
+      >
+        {isSending ? <ClipLoader color='ffffff' /> : 'Надіслати'}
+      </button>
     </form>
   );
 };
 
-export default SupportForm;
+export default ContactForm;

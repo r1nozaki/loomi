@@ -73,7 +73,7 @@ const FooterTop = () => {
           </div>
           <div>
             <h3 className='font-bold text-lg mb-2.5'>Соціальні мережі</h3>
-            <Socials />
+            <Socials className='justify-center md:justify-start' />
           </div>
         </div>
       </div>
