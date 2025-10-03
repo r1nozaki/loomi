@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ContactForm from './ContactForm';
 import Socials from '../common/Socials';
 import { MapPin, PhoneCall, Mail } from 'lucide-react';
-import Notification from '../Ui/Notification';
+import Notification from '../UI/Notification';
 
 const ContactContent = () => {
   const [success, setSuccess] = useState(false);
