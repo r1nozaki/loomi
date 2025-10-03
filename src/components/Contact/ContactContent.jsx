@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import ContactForm from './ContactForm';
 import Socials from '../common/Socials';
 import { MapPin, PhoneCall, Mail } from 'lucide-react';
+import Notification from '../Ui/Notification';
+
 const ContactContent = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
   return (
     <div className='w-full max-w-4xl'>
       <div className='mb-5 md:mb-10 lg:mb-20'>
@@ -14,7 +20,7 @@ const ContactContent = () => {
       </div>
       <div className='flex flex-col md:flex-row items-center gap-10'>
         <div className='w-full max-w-2xl'>
-          <ContactForm />
+          <ContactForm setSuccess={setSuccess} setError={setError} />
         </div>
         <div className='flex flex-col gap-4 w-full max-w-2xl items-center md:items-start'>
           <div className='flex gap-2 items-center'>
@@ -41,6 +47,20 @@ const ContactContent = () => {
           />
         </div>
       </div>
+      {success && (
+        <Notification
+          type='success'
+          message='Ваше повідомлення успішно відправлено'
+          className='fixed bottom-5 right-5 z-10'
+        />
+      )}
+      {error && (
+        <Notification
+          type='info'
+          message='Сталась помилка при відправленні вашого повідомлення'
+          className='fixed bottom-5 right-5 z-10'
+        />
+      )}
     </div>
   );
 };

@@ -1,5 +1,10 @@
+import { useState } from 'react';
 import NewsletterForm from './NewsletterForm';
+import Notification from '../UI/Notification';
 const NewsletterContent = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
   return (
     <>
       <div className='w-full text-white mb-5 md:mb-0 md:w-[45%] lg:w-[40%] xl:w-[35%]'>
@@ -11,7 +16,21 @@ const NewsletterContent = () => {
           ексклюзивний контент та свіжі новини прямо на пошту.
         </p>
       </div>
-      <NewsletterForm />
+      <NewsletterForm setSuccess={setSuccess} setError={setError} />
+      {success && (
+        <Notification
+          type='success'
+          message='Дякую, що підписались на нашу розсилку!'
+          className='fixed bottom-5 right-5 z-10'
+        />
+      )}
+      {error && (
+        <Notification
+          type='error'
+          message='Сталась помилка! Спробуйте ще раз'
+          className='fixed bottom-5 right-5 z-10'
+        />
+      )}
     </>
   );
 };

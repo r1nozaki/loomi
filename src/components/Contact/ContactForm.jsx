@@ -21,7 +21,7 @@ const schema = yup.object().shape({
     .max(1500, 'Скоротіть опис — дозволено до 1500 символів'),
 });
 
-const ContactForm = () => {
+const ContactForm = ({ setSuccess, setError }) => {
   const [isSending, setIsSending] = useState(false);
 
   const {
@@ -45,12 +45,22 @@ const ContactForm = () => {
         },
         'PskL4GEQ6kMNnIPsp'
       )
-      .then(reset())
-      .catch(err => {
-        console.error('Помилка при відправці:', err);
+      .then(() => {
+        setSuccess(true);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+        reset();
+      })
+      .catch(() => {
+        setError(true);
+        setError(() => {
+          false;
+        }, 3000);
       })
       .finally(() => setIsSending(false));
   };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}

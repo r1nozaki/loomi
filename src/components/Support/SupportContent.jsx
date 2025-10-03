@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import { Link } from 'react-router';
 import supportContent from '../../data/SupportCardContent';
 import supportPeople from '../../assets/images/supportPeople.png';
 import SupportCard from './SupportCard';
 import SupportForm from './SupportForm';
+import Notification from '../UI/Notification';
 
 const SupportContent = () => {
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
   return (
     <div className='w-full md:max-w-6xl mb-10'>
       <div className='flex flex-col md:flex-row items-center mb-0 md:mb-10 lg:mb-20'>
@@ -49,7 +54,7 @@ const SupportContent = () => {
         </div>
       </div>
       <div className='w-full mb-10'>
-        <SupportForm />
+        <SupportForm setSuccess={setSuccess} setError={setError} />
       </div>
       <div className='w-full bg-[#F73149] rounded-lg p-5 text-center h-62'>
         <h3 className='text-white text-xl font-bold mb-3'>
@@ -68,6 +73,20 @@ const SupportContent = () => {
           Зв'язатися з нами
         </Link>
       </div>
+      {success && (
+        <Notification
+          type='success'
+          message='Наша команда підтримки вже отримала ваше повідомлення.'
+          className='fixed bottom-5 right-5 z-10'
+        />
+      )}
+      {error && (
+        <Notification
+          type='error'
+          message='Ваш запит у підтримку не вдалося надіслати. Спробуйте ще раз.'
+          className='fixed bottom-5 right-5 z-10'
+        />
+      )}
     </div>
   );
 };
