@@ -11,9 +11,9 @@ const Notification = ({ type, message, className = '' }) => {
   };
 
   const icons = {
-    success: <FaCheckCircle className='mr-2' />,
-    error: <MdError className='mr-2' />,
-    info: <FaInfoCircle className='mr-2' />,
+    success: <FaCheckCircle className='mr-2 flex-shrink-0' />,
+    error: <MdError className='mr-2 flex-shrink-0' />,
+    info: <FaInfoCircle className='mr-2 flex-shrink-0' />,
   };
 
   return (
@@ -24,10 +24,11 @@ const Notification = ({ type, message, className = '' }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -30 }}
         transition={{ duration: 0.3 }}
-        className={`flex items-center px-5 py-3 rounded-lg shadow-md text-white ${styles[type]} ${className}`}
+        className={`flex items-center px-5
+           py-3 rounded-lg shadow-md text-white ${styles[type]} ${className}`}
       >
         {icons[type]}
-        <span>{message}</span>
+        <span className='text-sm md:text-base'>{message}</span>
       </motion.div>
     </AnimatePresence>
   );

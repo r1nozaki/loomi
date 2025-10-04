@@ -20,14 +20,14 @@ const ReportProblemSection = () => {
         <Notification
           type='success'
           message='Дякуємо, Ваш звіт про проблему успішно надіслано.'
-          className='fixed bottom-5 right-5 z-10'
+          className='fixed bottom-5 left-1/2 -translate-x-1/2 z-10 md:left-auto md:right-5 md:translate-x-0 w-100 md:w-auto'
         />
       )}
       {error && (
         <Notification
           type='error'
           message='Сталася помилка! Повідомлення не вдалося надіслати.'
-          className='fixed bottom-5 right-5 z-10'
+          className='fixed bottom-5 left-1/2 -translate-x-1/2 z-10 md:left-auto md:right-5 md:translate-x-0 w-100 md:w-auto'
         />
       )}
     </section>

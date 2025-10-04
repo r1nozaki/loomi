@@ -77,14 +77,14 @@ const SupportContent = () => {
         <Notification
           type='success'
           message='Наша команда підтримки вже отримала ваше повідомлення.'
-          className='fixed bottom-5 right-5 z-10'
+          className='fixed bottom-5 left-1/2 -translate-x-1/2 z-10 md:left-auto md:right-5 md:translate-x-0 w-100 md:w-auto'
         />
       )}
       {error && (
         <Notification
           type='error'
           message='Ваш запит у підтримку не вдалося надіслати. Спробуйте ще раз.'
-          className='fixed bottom-5 right-5 z-10'
+          className='fixed bottom-5 left-1/2 -translate-x-1/2 z-10 md:left-auto md:right-5 md:translate-x-0 w-100 md:w-auto'
         />
       )}
     </div>
