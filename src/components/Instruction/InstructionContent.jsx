@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import InstructionCard from './InstructionCard';
-import instructionCard from '../../data/InstructionCardContent';
+import instructionContent from '../../data/InstructionCardContent';
 import { TiInputChecked } from 'react-icons/ti';
 
 const InstructionContent = () => {
@@ -15,7 +15,7 @@ const InstructionContent = () => {
         </p>
       </div>
       <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-3'>
-        {instructionCard.map(({ icon, title, description }) => (
+        {instructionContent.map(({ icon, title, description }) => (
           <InstructionCard
             key={title}
             icon={icon}

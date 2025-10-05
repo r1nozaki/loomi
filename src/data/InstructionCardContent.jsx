@@ -1,6 +1,6 @@
 import { FaUser, FaSearch, FaHeart, FaCommentAlt } from 'react-icons/fa';
 
-const instructionCard = [
+const instructionContent = [
   {
     icon: <FaUser size={25} color='#F73149' />,
     title: 'Створи профіль',
@@ -23,4 +23,4 @@ const instructionCard = [
   },
 ];
 
-export default instructionCard;
+export default instructionContent;
