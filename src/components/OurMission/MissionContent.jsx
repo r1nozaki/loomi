@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import MissionCard from './MissionCard';
 import { missionContent, missionContent2 } from '../../data/MissionCardContent';
 import MissionPeoples from '../../assets/images/MissionPeoples.png';
-import MissionPeople from '../../assets/images/MissionPeople.png';
+import MissionPeople from '../../assets/images/missionPeople.png';
 import HowWeWorkCard from './HowWeWorkCard';
 
 const MissionContent = () => {
@@ -48,7 +48,7 @@ const MissionContent = () => {
         Місія - не просто допомогти студентам знайти одне одного. Ми допомагаємо
         знайти себе.
       </p>
-      <div className='flex  justify-between py-10'>
+      <div className='flex  justify-between pt-10'>
         <div className='flex flex-col gap-10 mt-5 md:mt-10 lg:mt-20'>
           <h3 className='text-xl md:text-2xl text-white text-center'>
             Приєднуйся до нашої спільноти вже сьогодні
