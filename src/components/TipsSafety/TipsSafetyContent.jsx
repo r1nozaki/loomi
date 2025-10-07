@@ -23,7 +23,7 @@ const TipsSafetyContent = () => {
           />
         </div>
       </div>
-      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center gap-3 md:gap-10 mb-10'>
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center place-items-center gap-3 md:gap-5 lg:gap-10 mb-10'>
         {tipsContent.map(({ icon, tip }) => (
           <TipsCard key={tip} icon={icon} tip={tip} />
         ))}

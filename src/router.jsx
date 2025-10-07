@@ -37,6 +37,7 @@ const InstructionPage = lazy(() =>
   import('./pages/Instruction/InstructionPage')
 );
 const MissionPage = lazy(() => import('./pages/Mission/MissionPage'));
+const TeamPage = lazy(() => import('./pages/OurTeam/TeamPage'));
 const NotFoundPage = lazy(() => import('./pages/404/Page404'));
 
 export const router = createBrowserRouter([
@@ -54,6 +55,7 @@ export const router = createBrowserRouter([
       { path: ROUTER_PATHS.CONTACT, element: <ContactUs /> },
       { path: ROUTER_PATHS.INSTRUCTION, element: <InstructionPage /> },
       { path: ROUTER_PATHS.MISSION, element: <MissionPage /> },
+      { path: ROUTER_PATHS.TEAM, element: <TeamPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },

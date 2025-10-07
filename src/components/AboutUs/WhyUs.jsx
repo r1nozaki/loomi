@@ -3,7 +3,7 @@ import Btn from '../UI/Btn';
 
 const WhyUs = () => {
   return (
-    <section className='relative w-full py-5 bg-black flex justify-center items-center'>
+    <section className='relative w-full py-5 bg-black/90 flex justify-center items-center'>
       <article className='w-full max-w-4xl px-4'>
         <h1 className='text-[34px] italic text-white font-bold text-center'>
           Чому варто обрати саме нас для знайомств?

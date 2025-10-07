@@ -108,7 +108,7 @@ const SignInForm = ({ handleSignInModal }) => {
           </div>
           <button
             type='submit'
-            className='w-full py-2 md:py-4 bg-[#674CFF] rounded-[50px] text-lg md:text-xl text-white text-center transition-colors duration-300 hover:bg-[#5038c6] hover:cursor-pointer '
+            className='w-full py-2 md:py-4 bg-[#c94a72] rounded-[50px] text-lg md:text-xl text-white text-center transition-colors duration-300 hover:bg-[#a83258] hover:cursor-pointer '
           >
             Вхід
           </button>
@@ -121,7 +121,7 @@ const SignInForm = ({ handleSignInModal }) => {
         </div>
         <button
           type='button'
-          className='w-full flex items-center  bg-[#674CFF] hover:bg-[#5038c6] rounded-[50px] text-xl text-white py-2 md:py-4 transition-colors duration-300 relative hover:cursor-pointer'
+          className='w-full flex items-center  bg-[#c94a72] hover:bg-[#a83258] rounded-[50px] text-xl text-white py-2 md:py-4 transition-colors duration-300 relative hover:cursor-pointer'
         >
           <span className='w-10 h-10 md:w-13 md:h-13 rounded-full bg-white flex justify-center items-center py-2 absolute left-1'>
             <img src={GoogleIcon} alt='Google icon' />
