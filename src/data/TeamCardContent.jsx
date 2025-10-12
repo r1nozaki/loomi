@@ -1,5 +1,5 @@
 import Valik from '../assets/team/Valik.png';
-import Vanya from '../assets/team/Vanya.png';
+import Vanya from '../assets/team/Vanya.jpg';
 import Andrii from '../assets/team/Andrii.png';
 import Maxik from '../assets/team/Maxik.png';
 
@@ -12,9 +12,12 @@ const teamContent = [
     position: 'Backend розробник',
     description: 'Створює логіку, бази даних і серверну частину платформи.',
     socials: [
-      { link: 'https://t.me/r1nozaki', icon: <FaLinkedinIn size={18} /> },
       {
-        link: 'https://t.me/r1nozaki',
+        link: 'https://www.linkedin.com/in/valentyn-novosad-32a327341',
+        icon: <FaLinkedinIn size={18} />,
+      },
+      {
+        link: 'https://t.me/un5721',
         icon: <FaTelegramPlane size={18} />,
       },
       {
@@ -23,6 +26,7 @@ const teamContent = [
       },
     ],
   },
+
   {
     photoMember: Vanya,
     fullname: 'Загоруй Іван',
@@ -34,17 +38,22 @@ const teamContent = [
       { link: 'https://github.com/r1nozaki', icon: <FaGithub size={18} /> },
     ],
   },
+
   {
     photoMember: Andrii,
     fullname: 'Дроб Андрій',
     position: 'UI/UX дизайнер',
     description: 'Проєктує досвід користувачів і створює візуальний стиль.',
     socials: [
-      { link: 'https://t.me/r1nozaki', icon: <FaLinkedinIn size={18} /> },
-      { link: 'https://t.me/r1nozaki', icon: <FaTelegramPlane size={18} /> },
+      {
+        link: 'https://www.linkedin.com/in/andrii-drob-716856340',
+        icon: <FaLinkedinIn size={18} />,
+      },
+      { link: 'https://t.me/eewreey', icon: <FaTelegramPlane size={18} /> },
       { link: 'https://github.com/andriydrob', icon: <FaGithub size={18} /> },
     ],
   },
+
   {
     photoMember: Maxik,
     fullname: 'Мальований Максим',
