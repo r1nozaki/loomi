@@ -5,6 +5,11 @@ import Newsletter from '../../components/Newsletter/Newsletter';
 const AboutPage = () => {
   return (
     <>
+      <title>Про нас</title>
+      <meta
+        name='description'
+        content='Page with detail information about loomi'
+      />
       <WhyUs />
       <div className='px-5 md:px-23 bg-[#272727] text-white pt-10'>
         <Banner
