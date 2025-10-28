@@ -1,0 +1,148 @@
+openapi: 3.0.0
+info:
+  title: loomi API
+  version: 1.0.0
+
+paths:
+  /users/register:
+    post:
+      summary: Реєстрація нового користувача
+      tags:
+        - Users
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name, email, password, age, gender]
+              properties:
+                name:
+                  type: string
+                  example: Anna
+                email:
+                  type: string
+                  example: anna@gmail.com
+                password:
+                  type: string
+                  example: mypassword
+                age:
+                  type: integer
+                  example: 25
+                gender:
+                  type: string
+                  example: female
+                bio:
+                  type: string
+                  example: Love traveling and coffee ☕
+                photo_url:
+                  type: string
+                  example: https://example.com/photo.jpg
+                location:
+                  type: string
+                  example: Kyiv
+      responses:
+        '201':
+          description: Успішна реєстрація
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user_id:
+                    type: integer
+                    example: 101
+                  message:
+                    type: string
+                    example: User successfully registered
+
+  /likes:
+    post:
+      summary: Додати лайк іншому користувачу
+      tags:
+        - Likes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [from_user_id, to_user_id]
+              properties:
+                from_user_id:
+                  type: integer
+                  example: 101
+                to_user_id:
+                  type: integer
+                  example: 205
+      responses:
+        '200':
+          description: Результат дії (лайк або збіг)
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    properties:
+                      like_id:
+                        type: integer
+                        example: 3001
+                      is_match:
+                        type: boolean
+                        example: false
+                      message:
+                        type: string
+                        example: Like added
+                  - type: object
+                    properties:
+                      like_id:
+                        type: integer
+                        example: 3002
+                      is_match:
+                        type: boolean
+                        example: true
+                      match_id:
+                        type: integer
+                        example: 5001
+                      message:
+                        type: string
+                        example: It's a match!
+
+  /matches/{user_id}:
+    get:
+      summary: Отримати список збігів користувача
+      tags:
+        - Matches
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          example: 101
+      responses:
+        '200':
+          description: Список збігів
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user_id:
+                    type: integer
+                    example: 101
+                  matches:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        match_id:
+                          type: integer
+                          example: 5001
+                        user2_id:
+                          type: integer
+                          example: 205
+                        matched_at:
+                          type: string
+                          format: date-time
+                          example: '2025-10-07T12:34:56Z'

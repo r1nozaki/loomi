@@ -8,7 +8,6 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
-  // Ігноруємо технічні папки
   globalIgnores(['dist', 'node_modules', 'build']),
 
   {
@@ -31,22 +30,16 @@ export default defineConfig([
       'jsx-a11y': jsxA11y,
     },
 
-    extends: [
-      js.configs.recommended, // тільки базовий ESLint
-    ],
+    extends: [js.configs.recommended],
 
     rules: {
-      // React правила
-      'react/jsx-uses-react': 'off', // React 17+ не потребує
+      'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
 
-      // React Hooks
       ...reactHooks.configs.recommended.rules,
 
-      // React Refresh (Vite)
       'react-refresh/only-export-components': 'off',
 
-      // Імпорти
       'import/order': [
         'warn',
         {
@@ -55,10 +48,8 @@ export default defineConfig([
         },
       ],
 
-      // Доступність JSX
       'jsx-a11y/alt-text': 'warn',
 
-      // Загальні правила
       'no-unused-vars': ['warn', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },

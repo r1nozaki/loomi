@@ -1,3 +1,4 @@
+import React from 'react';
 import { render } from '@testing-library/react';
 import { MemoryRouter } from 'react-router';
 import ScrollToTop from '../helpers/ScrollToTop';
@@ -27,6 +28,7 @@ describe('ScrollToTop', () => {
     );
 
     expect(lenis.stop).toHaveBeenCalled();
+
     expect(window.scrollTo).toHaveBeenCalledWith({
       top: 0,
       left: 0,
@@ -34,6 +36,7 @@ describe('ScrollToTop', () => {
     });
 
     jest.advanceTimersByTime(300);
+
     expect(lenis.start).toHaveBeenCalled();
   });
 });
