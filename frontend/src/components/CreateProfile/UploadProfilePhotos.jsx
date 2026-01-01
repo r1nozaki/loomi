@@ -29,7 +29,7 @@ const UploadProfilePhotos = ({ watch, setValue, errors }) => {
           return (
             <div
               key={index}
-              className='relative w-full aspect-[3/4] border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-neutral-900 overflow-hidden cursor-pointer'
+              className='relative w-full aspect-3/4 border-2 border-dashed border-gray-600 rounded-xl flex items-center justify-center bg-neutral-900 overflow-hidden cursor-pointer'
               onClick={() => inputRefs.current[index].click()}
             >
               <input
@@ -64,7 +64,7 @@ const UploadProfilePhotos = ({ watch, setValue, errors }) => {
                     e.stopPropagation();
                     inputRefs.current[index].click();
                   }}
-                  className='bg-gradient-to-br from-[#F73149] via-[#e62a3f] to-[#d62839] hover:scale-110 rounded-full flex items-center justify-center w-10 h-10 transition-all duration-300 hover:shadow-2xl hover:shadow-[#F73149]/50 border-2 border-white/20 cursor-pointer'
+                  className='bg-linear-to-br from-[#F73149] via-[#e62a3f] to-[#d62839] hover:scale-110 rounded-full flex items-center justify-center w-10 h-10 transition-all duration-300 hover:shadow-2xl hover:shadow-[#F73149]/50 border-2 border-white/20 cursor-pointer'
                 >
                   <Plus className='text-white' size={22} strokeWidth={3} />
                 </button>
