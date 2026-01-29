@@ -1,43 +1,46 @@
-# loomi
+🌟 Loomi
 
-## Опис
+Loomi is a modern dating and social networking application designed specifically for university students.
 
-**loomi** — це додаток для знайомств з унікальним підходом до пошуку нових
-людей.  
-Мета проєкту — створити просту та інтуїтивну платформу, де студенти
-університетів можуть знаходити друзів чи потенційних партнерів, обмінюватися
-повідомленнями та формувати спільноти.
+⸻
 
-## Інсталяція та запуск
+🛠️ Tech Stack
 
-git clone <https://github.com/r1nozaki/loomi>
+Frontend
+	•	JavaScript
+	•	React
+	•	Tailwind CSS
 
+Backend
+	•	Java
+	•	Spring Boot
+
+Database
+	•	PostgreSQL
+
+⸻
+
+⚙️ Installation & Run
+
+1. Clone the repository
+
+git clone https://github.com/r1nozaki/loomi
 cd loomi
+
+2. Install dependencies
 
 npm install
 
+3. Run the project with Docker
+
 docker compose up --build
 
-## Технології
+After that, the application will be available locally 🚀
 
--JavaScript
+⸻
 
--React
-
--Java
-
--Spring
-
--Tailwind CSS
-
--PostgreSQL
-
-## Автори
-
-Іван Загоруй - Frontend Developer
-
-Валентин Новосад - Backend Developer
-
-Андрій Дроб - UX/UI Designer
-
-Максим Мальований - Team Lead
+👥 Team
+	•	Ivan Zahorui — Frontend Developer
+	•	Valentyn Novosad — Backend Developer
+	•	Andrii Drob — UX/UI Designer
+	•	Maksym Malovanyi — Team Lead
